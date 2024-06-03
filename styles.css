@@ -1,0 +1,276 @@
+@font-face {
+    font-family: "Minggola";
+    src: url("fontes/minggola/Minggola.ttf");
+}
+
+@font-face {
+    font-family: "Young";
+    src: url("fontes/young_heart/Young\ Heart.ttf");
+}
+
+@font-face {
+    font-family: "Mochary";
+    src: url("fontes/mochary/Mochary_PERSONAL_USE_ONLY.ttf");
+}
+
+:root {
+    --primary-color: #464E2E;
+    --secondary-color: #362706c2;
+    --accent-color: #ACB992;
+    --background-color: #E9E5D6;
+    --text-color: #000000;
+    --black: #000000c7;
+    --verde: #44521bea;
+    --light-text-color: #ffffff;
+    --form-background: #ffffff;
+    --button-text-color: #ffffff;
+
+
+    --fonte-titulo: 'Mochary', sans-serif;
+    --fonte-destaque: 'Young', sans-serif;
+    --fonte-padrao: "Righteous", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: var(--light-text-color);
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 99.22vw;
+    height: auto;
+    background-size: cover;
+    opacity: 0.9;
+    margin-bottom: -.04em;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--verde);
+}
+
+.banner-text h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 10rem;
+    text-shadow: 1px 2px var(--black);
+}
+
+.banner-text p {
+    font-family: var(--fonte-destaque);
+    font-size: 6em;
+    text-shadow: 1px 1px var(--black);
+    margin-top:-.8em; 
+}
+
+nav {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    margin-top: -.46em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.services-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1 1 30%;
+    margin: 1rem;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.testimonial-item {
+    flex: 1 1 45%;
+    margin: 1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-item h4 {
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+form {
+    background: var(--form-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+form button {
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: var(--accent-color);
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+
+    .services-gallery,
+    .testimonials {
+        flex-direction: column;
+    }
+
+    .service-item,
+    .testimonial-item {
+        margin: 1rem 0;
+    }
+
+    .banner-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header,
+    footer {
+        padding: 0.5rem 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner-text p {
+        font-size: 1em;
+    }
+
+    .banner img {
+        zoom: 1.07;
+        margin-top: -1em;
+        width: 93.4vw;
+    }
+}
